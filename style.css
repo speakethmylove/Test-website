@@ -1,28 +1,39 @@
-/* General styles */
+/* Y2K Neo-Future Theme */
+
+/* Global styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Verdana', sans-serif;
   margin: 0;
   padding: 0;
+  background: #000;
+  color: #fff;
   line-height: 1.6;
 }
 
-/* Header styles */
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: linear-gradient(90deg, #ff66cc, #ff33cc);
+  color: #000;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.heart {
+  color: #ff66cc;
+  font-size: 1.5rem;
 }
 
 .nav-links {
-  display: flex;
-  justify-content: center;
   list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.nav-links li {
-  margin: 0 15px;
+  display: flex;
+  gap: 20px;
 }
 
 .nav-links a {
@@ -32,54 +43,84 @@ header {
 }
 
 .nav-links a:hover {
-  text-decoration: underline;
+  text-shadow: 0 0 8px #ff66cc;
 }
 
-/* Section styles */
+/* Hero Section */
+#home {
+  text-align: center;
+  padding: 100px 20px;
+  background: radial-gradient(circle, #111, #000);
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 10px #ff66cc, 0 0 20px #ff33cc;
+}
+
+.cta-btn {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: #000;
+  background: #ff66cc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #ff33cc;
+  color: #fff;
+  text-shadow: 0 0 5px #ff66cc;
+}
+
+/* Sections */
 section {
-  padding: 2rem;
+  padding: 60px 20px;
   text-align: center;
 }
 
-#home {
-  background: linear-gradient(to right, #0074d9, #7fdbff);
+#blog {
+  background: linear-gradient(90deg, #ff66cc, #ff33cc);
+  color: #000;
+}
+
+#contact {
+  background: #222;
   color: #fff;
 }
 
-#about, #services, #contact {
-  background-color: #f4f4f4;
-}
-
-/* Form styles */
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 15px;
 }
 
 form input, form textarea, form button {
-  margin: 10px 0;
-  padding: 10px;
   width: 80%;
   max-width: 400px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
 }
 
 form button {
-  background-color: #0074d9;
-  color: #fff;
-  border: none;
+  background: #ff66cc;
+  color: #000;
   cursor: pointer;
 }
 
 form button:hover {
-  background-color: #005bb5;
+  background: #ff33cc;
+  color: #fff;
 }
 
-/* Footer styles */
+/* Footer */
 footer {
-  background-color: #333;
-  color: #fff;
   text-align: center;
-  padding: 1rem 0;
-  margin-top: 2rem;
+  padding: 20px;
+  background: #000;
+  color: #ff66cc;
 }
