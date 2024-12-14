@@ -1,22 +1,13 @@
-// Handle contact form submission
+// Handle form submission
 document.getElementById('contact-form').addEventListener('submit', function (event) {
-  event.preventDefault(); // Prevent form from reloading the page
+  event.preventDefault();
 
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
 
-  // Simple validation
-  if (name && email && message) {
-    document.getElementById('form-feedback').textContent = 
-      `Thank you, ${name}! We will get back to you soon.`;
-    document.getElementById('form-feedback').style.color = 'green';
-  } else {
-    document.getElementById('form-feedback').textContent = 
-      'Please fill out all fields.';
-    document.getElementById('form-feedback').style.color = 'red';
-  }
+  const feedback = document.getElementById('form-feedback');
+  feedback.textContent = `Thanks, ${name}! We'll get back to you at ${email}.`;
+  feedback.style.color = '#ff66cc';
 
-  // Reset the form
   this.reset();
 });
